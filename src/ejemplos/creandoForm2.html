@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario Avanzado</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('formRegistro').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                var formData = new FormData(this);
+
+                formData.forEach(function(value, key) {
+                    console.log(key+": ", value);
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <h2>Formulario Nivel 2</h2>
